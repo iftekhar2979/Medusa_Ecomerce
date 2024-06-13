@@ -1,10 +1,12 @@
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@layer utilities {
-  /* Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
+
+ @layer utilities { 
+   Chrome, Safari and Opera 
+   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
 
@@ -13,9 +15,9 @@
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+    -ms-overflow-style: none; 
+     scrollbar-width: none; 
+   }
 
   input:focus ~ label,
   input:not(:placeholder-shown) ~ label {
@@ -46,9 +48,9 @@
   input[type="search"]::-webkit-search-results-button,
   input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
-  }
-}
-
+  }  
+ } 
+ 
 @layer components {
   .content-container {
     @apply max-w-[1440px] w-full mx-auto px-6;
@@ -109,4 +111,14 @@
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
   }
+} 
+.menu-button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 1rem; /* Adjust this value to position the button */
+  color: inherit;
+  margin: 0rem 1rem;
 }

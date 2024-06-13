@@ -102,5 +102,6 @@ export default async function ProductPage({ params }: Props) {
       region={region}
       countryCode={params.countryCode}
     />
+    
   )
 }

@@ -8,10 +8,11 @@ const DEFAULT_REGION = process.env.NEXT_PUBLIC_DEFAULT_REGION || "us"
 const regionMapCache = {
   regionMap: new Map<string, Region>(),
   regionMapUpdated: Date.now(),
-}
-
-async function getRegionMap() {
-  const { regionMap, regionMapUpdated } = regionMapCache
+  }
+  
+  async function getRegionMap() {
+    const { regionMap, regionMapUpdated } = regionMapCache
+    console.log(BACKEND_URL)
 
   if (
     !regionMap.keys().next().value ||
@@ -59,6 +60,7 @@ async function getCountryCode(
       ?.toLowerCase()
 
     const urlCountryCode = request.nextUrl.pathname.split("/")[1]?.toLowerCase()
+    console.log(urlCountryCode)
 
     if (urlCountryCode && regionMap.has(urlCountryCode)) {
       countryCode = urlCountryCode
